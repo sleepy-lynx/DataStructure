@@ -1,4 +1,4 @@
-#include "data.h"
+#include "object.h"
 
 data *Integer(int number){
     int *newInteger = (int *)malloc(sizeof(int));
@@ -6,7 +6,7 @@ data *Integer(int number){
     data *newData = (data *)malloc(sizeof(data));
     newData->ptr = newInteger;
     newData->size = sizeof(int);
-    
+
     return newData;
 }
 
