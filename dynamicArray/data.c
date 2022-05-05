@@ -16,5 +16,4 @@ void readData(data *targetData){
         printf("%#x", *(p+i));
     }
     printf("\n");
-    return;
 }

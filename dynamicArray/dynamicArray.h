@@ -1,13 +1,6 @@
-//
-//  dynamicArray.h
-//  PS
-//
-//  Created by 혜승 on 2022/05/04.
-//
-
 #ifndef dynamicArray_h
 #define dynamicArray_h
-#define DEFAULT_ARRAY_SIZE 16
+#define DEFAULT_ARRAY_SIZE 1
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -20,6 +13,8 @@ typedef struct {
 }dynamicArray;
 
 void append(dynamicArray *targetArray, data *targetData);
-dynamicArray* initArray(void);
+int getArraySize(dynamicArray *targetArray);
+void resizeArray(dynamicArray *targetArray);
+dynamicArray* initArray();
 
 #endif /* dynamicArray_h */

@@ -1,8 +1,13 @@
 #include "dynamicArray.h"
 
 void append(dynamicArray *targetArray, data *targetData) {
+    if(getArraySize(targetArray) == targetArray->size) resizeArray(targetArray);
     targetArray->top++;
     targetArray->elements[targetArray->top] = targetData;
+}
+
+int getArraySize(dynamicArray *targetArray) {
+    return targetArray->top + 1;
 }
 
 dynamicArray* initArray(void){
@@ -13,7 +18,12 @@ dynamicArray* initArray(void){
     return newArray;
 }
 
-void resizeArray(dynamicArray *targetArray, int targetSize) {
-    targetArray->elements = (data **)malloc(sizeof(data *) * (targetArray->size * 2));
-    
+void resizeArray(dynamicArray *targetArray) {
+    data **tmp = (data **)malloc(sizeof(data *) * targetArray->size * 2);
+    for(int i=0;i<getArraySize(targetArray);i++){
+        tmp[i] = targetArray->elements[i];
+    }
+    free(targetArray->elements);
+    targetArray->elements = tmp;
+    targetArray->size = targetArray->size * 2;
 }
