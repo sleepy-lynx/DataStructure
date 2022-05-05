@@ -6,8 +6,8 @@ set(CMAKE_C_STANDARD 11)
 include_directories(dynamicArray)
 
 add_executable(DataStructure
-        dynamicArray/data.c
-        dynamicArray/data.h
+        dynamicArray/object.c
+        dynamicArray/object.h
         dynamicArray/dynamicArray.c
         dynamicArray/dynamicArray.h
         dynamicArray/main.c)
