@@ -7,17 +7,17 @@
 #include "object.h"
 
 typedef struct {
-    data **elements;
+    object **elements;
     int size;
     int top;
 }dynamicArray;
 
-void appendArray(dynamicArray *targetArray, data *object);
-int getArraySize(dynamicArray *targetArray);
+void appendArray(dynamicArray *targetArray, object *object);
+int getElementNum(dynamicArray *targetArray);
 void resizeArray(dynamicArray *targetArray);
 dynamicArray* initArray();
-data *popArray(dynamicArray *targetArray);
-data *removeArray(dynamicArray *targetArray, int index);
-void insertArray(dynamicArray *targetArray, int index, data *object);
+object *popArray(dynamicArray *targetArray);
+object *removeArray(dynamicArray *targetArray, int index);
+void insertArray(dynamicArray *targetArray, int index, object *object);
 
 #endif /* dynamicArray_h */

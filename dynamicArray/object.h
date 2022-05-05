@@ -8,7 +8,7 @@
 typedef struct {
     void *ptr;
     int size;
-}data;
-data *Integer(int number);
-void readData(data *targetData);
+}object;
+object *Integer(int number);
+void readData(object *targetData);
 #endif /* data_h */

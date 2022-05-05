@@ -1,16 +1,16 @@
 #include "object.h"
 
-data *Integer(int number){
+object *Integer(int number){
     int *newInteger = (int *)malloc(sizeof(int));
     *newInteger = number;
-    data *newData = (data *)malloc(sizeof(data));
+    object *newData = (object *)malloc(sizeof(object));
     newData->ptr = newInteger;
     newData->size = sizeof(int);
 
     return newData;
 }
 
-void readData(data *targetData){
+void readData(object *targetData){
     unsigned char* p = (unsigned char*)targetData->ptr;
     for(int i=0;i<targetData->size;i++){
         printf("%#x", *(p+i));
