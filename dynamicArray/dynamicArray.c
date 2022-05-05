@@ -1,9 +1,9 @@
 #include "dynamicArray.h"
 
-void append(dynamicArray *targetArray, data *targetData) {
+void appendArray(dynamicArray *targetArray, data *object) {
     if(getArraySize(targetArray) == targetArray->size) resizeArray(targetArray);
     targetArray->top++;
-    targetArray->elements[targetArray->top] = targetData;
+    targetArray->elements[targetArray->top] = object;
 }
 
 int getArraySize(dynamicArray *targetArray) {
@@ -30,5 +30,24 @@ void resizeArray(dynamicArray *targetArray) {
 
 data *popArray(dynamicArray *targetArray) {
     data *ret = targetArray->elements[targetArray->top--];
+    return ret;
+}
+
+void insertArray(dynamicArray *targetArray, int index, data *object) {
+    if(index == targetArray->top) return appendArray(targetArray, object);
+    for(int i=index + 1;i< getArraySize(targetArray);i++){
+        targetArray->elements[i] = targetArray->elements[i - 1];
+    }
+    targetArray->elements[index] = object;
+    targetArray->top++;
+}
+
+data *removeArray(dynamicArray *targetArray, int index) {
+    if(index == targetArray->top) return popArray(targetArray);
+    data *ret = targetArray->elements[index];
+    for(int i=index;i<getArraySize(targetArray) - 1;i++) {
+        targetArray->elements[i] = targetArray->elements[i + 1];
+    }
+    targetArray->top--;
     return ret;
 }
