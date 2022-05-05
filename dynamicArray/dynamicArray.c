@@ -27,3 +27,8 @@ void resizeArray(dynamicArray *targetArray) {
     targetArray->elements = tmp;
     targetArray->size = targetArray->size * 2;
 }
+
+data *popArray(dynamicArray *targetArray) {
+    data *ret = targetArray->elements[targetArray->top--];
+    return ret;
+}

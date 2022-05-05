@@ -16,5 +16,6 @@ void append(dynamicArray *targetArray, data *targetData);
 int getArraySize(dynamicArray *targetArray);
 void resizeArray(dynamicArray *targetArray);
 dynamicArray* initArray();
+data *popArray(dynamicArray *targetArray);
 
 #endif /* dynamicArray_h */

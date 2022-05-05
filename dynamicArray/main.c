@@ -10,6 +10,7 @@ int main() {
     append(list, Integer(2));
     append(list, Integer(3));
     append(list, Integer(4));
+    popArray(list);
     for(int i=0;i<list->top + 1;i++){
         readData(list->elements[i]);
     }
