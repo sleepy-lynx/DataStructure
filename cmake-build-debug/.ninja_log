@@ -1,5 +1,0 @@
-# ninja log v5
-1	103	1651743969035799637	CMakeFiles/DataStructure.dir/dynamicArray/dynamicArray.c.o	feab7102219cc2fc
-1	108	1651743969040189593	CMakeFiles/DataStructure.dir/dynamicArray/data.c.o	bddb91dc29e5c299
-1	112	1651743969045688684	CMakeFiles/DataStructure.dir/dynamicArray/main.c.o	e61cf770354830ec
-112	220	1651743969153608822	DataStructure	5157cac7b4675e1b
