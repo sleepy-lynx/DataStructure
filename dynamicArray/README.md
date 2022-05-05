@@ -19,21 +19,30 @@ void insertArray(dynamicArray *targetArray, int index, object *object); // inser
 ### example
 main.c
 ```c
-#include <stdlib.h>
 #include "object.h"
 #include "dynamicArray.h"
 
 int main() {
     dynamicArray *list = initArray();
-    appendArray(list, Integer(1));
-    appendArray(list, Integer(2));
-    appendArray(list, Integer(3));
-    appendArray(list, Integer(4));
-    free(popArray(list));
-    free(removeArray(list, 0));
-    insertArray(list, 0, Integer(10));
-    for(int i=0;i<list->top + 1;i++){
+    for(int i=0;i<10;i++) appendArray(list, Integer(i));
+    popArray(list);
+    insertArray(list, 0, Integer(11));
+    removeArray(list, 1);
+
+    for(int i=0;i< getElementNum(list);i++){
         readData(list->elements[i]);
     }
 }
+```
+output
+```
+0xb000
+0x1000
+0x2000
+0x3000
+0x4000
+0x5000
+0x6000
+0x7000
+0x8000
 ```
