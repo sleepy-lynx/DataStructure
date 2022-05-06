@@ -7,42 +7,28 @@ currently I only implemented the Integer Object.. <Br>
 ### ADT of dynamic array
 
 ```c
-dynamicArray* initArray(); // create empty array with size of 2
-int getElementNum(dynamicArray *targetArray); // get number of elements in the array
-void resizeArray(dynamicArray *targetArray); // double the capacity of the targetArray 
-void appendArray(dynamicArray *targetArray, object *object); // push back object to targetArray
-object *popArray(dynamicArray *targetArray); // pop the last object and return it
-object *removeArray(dynamicArray *targetArray, int index); // remove and return the object in the index
-void insertArray(dynamicArray *targetArray, int index, object *object); // insert obejct to the index
+dynamicArray* initArray(); // generate dynamic array and initialize it
+int len(dynamicArray *targetArray); // return the size of the array(need to be fixed after implementing iterator
+void resizeArray(dynamicArray *targetArray); // double the capacity of the array
+void append(dynamicArray *targetArray, DATA object); // add an element at the end
+DATA pop(dynamicArray *targetArray); // get the last element and pop it
+void insert(dynamicArray *targetArray, int index, DATA object); // insert element to the index position
+DATA removeIdx(dynamicArray *targetArray, int index); // remove element at the index position
 ```
 
 ### example
 main.c
 ```c
-#include "object.h"
-#include "dynamicArray.h"
-
 int main() {
-    dynamicArray *list = initArray();
-    for(int i=0;i<10;i++) appendArray(list, Integer(i));
-    popArray(list);
-    insertArray(list, 0, Integer(11));
-    removeArray(list, 1);
-
-    for(int i=0;i< getElementNum(list);i++){
-        readData(list->elements[i]);
-    }
+    dynamicArray *l = initArray();
+    for(int i=0;i<10;i++) append(l, i);
+    pop(l);
+    insert(l, 0, 10);
+    removeIdx(l, 1);
+    for(int i=0;i<len(l);i++) printf("%d ", l->elements[i]);
 }
 ```
 output
 ```
-0xb000
-0x1000
-0x2000
-0x3000
-0x4000
-0x5000
-0x6000
-0x7000
-0x8000
+10 1 2 3 4 5 6 7 8 
 ```
