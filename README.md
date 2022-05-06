@@ -2,5 +2,7 @@
 Implementing Python features using C
 
 ## TO-DO
-- [ ] Object free by Reference Counting
+- [ ] Object management by Reference Counting
 - [x] [Dynamic Array(Python List)](dynamicArray)
+- [ ] inheritance
+- [ ] overloading
