@@ -1,23 +1,23 @@
 #ifndef dynamicArray_h
 #define dynamicArray_h
-#define DEFAULT_ARRAY_SIZE 1
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "object.h"
+#define DATA int
+#define INIT_ARRAY_SIZE 2
 
 typedef struct {
-    object **elements;
+    DATA *elements;
     int size;
     int top;
 }dynamicArray;
 
-void appendArray(dynamicArray *targetArray, object *object);
-int getElementNum(dynamicArray *targetArray);
-void resizeArray(dynamicArray *targetArray);
 dynamicArray* initArray();
-object *popArray(dynamicArray *targetArray);
-object *removeArray(dynamicArray *targetArray, int index);
-void insertArray(dynamicArray *targetArray, int index, object *object);
+int len(dynamicArray *targetArray);
+void resizeArray(dynamicArray *targetArray);
+void append(dynamicArray *targetArray, DATA object);
+DATA pop(dynamicArray *targetArray);
+void insert(dynamicArray *targetArray, int index, DATA object);
+DATA removeIdx(dynamicArray *targetArray, int index);
 
 #endif /* dynamicArray_h */

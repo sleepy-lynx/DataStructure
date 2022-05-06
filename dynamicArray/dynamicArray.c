@@ -1,26 +1,21 @@
 #include "dynamicArray.h"
 
-void appendArray(dynamicArray *targetArray, object *object) {
-    if(getElementNum(targetArray) == targetArray->size) resizeArray(targetArray);
-    targetArray->top++;
-    targetArray->elements[targetArray->top] = object;
-}
-
-int getElementNum(dynamicArray *targetArray) {
-    return targetArray->top + 1;
-}
-
-dynamicArray* initArray(void){
-    dynamicArray *newArray = (dynamicArray *)malloc(sizeof(dynamicArray));
-    newArray->size = DEFAULT_ARRAY_SIZE;
-    newArray->elements = (object **)malloc(sizeof(object *) * DEFAULT_ARRAY_SIZE);
+dynamicArray* initArray() {
+    dynamicArray* newArray = (dynamicArray *)malloc(sizeof(dynamicArray));
+    newArray->size = INIT_ARRAY_SIZE;
+    newArray->elements = (DATA *)malloc(sizeof(DATA) * INIT_ARRAY_SIZE);
     newArray->top = -1;
+
     return newArray;
 }
 
+int len(dynamicArray *targetArray) {
+    return targetArray->top + 1;
+}
+
 void resizeArray(dynamicArray *targetArray) {
-    object **tmp = (object **)malloc(sizeof(object *) * targetArray->size * 2);
-    for(int i=0; i < getElementNum(targetArray); i++){
+    DATA *tmp = (DATA *)malloc(sizeof(DATA) * targetArray->size * 2);
+    for(int i=0;i<len(targetArray);i++){
         tmp[i] = targetArray->elements[i];
     }
     free(targetArray->elements);
@@ -28,27 +23,27 @@ void resizeArray(dynamicArray *targetArray) {
     targetArray->size = targetArray->size * 2;
 }
 
-object *popArray(dynamicArray *targetArray) {
-    object *ret = targetArray->elements[targetArray->top--];
-    return ret;
+void append(dynamicArray *targetArray, DATA object) {
+    if(len(targetArray) == targetArray->size) resizeArray(targetArray);
+    targetArray->elements[++targetArray->top] = object;
 }
 
-void insertArray(dynamicArray *targetArray, int index, object *object) {
-    if(getElementNum(targetArray) == targetArray->size) resizeArray(targetArray);
-    if(index == targetArray->top) return appendArray(targetArray, object);
-    for(int i= getElementNum(targetArray) + 1; i > index; i--){
+DATA pop(dynamicArray *targetArray) {
+    return targetArray->elements[targetArray->top--];
+}
+
+void insert(dynamicArray *targetArray, int index, DATA object) {
+    if(len(targetArray) == targetArray->size) resizeArray(targetArray);
+    for(int i=len(targetArray);i>index;i--){
         targetArray->elements[i] = targetArray->elements[i - 1];
     }
     targetArray->elements[index] = object;
     targetArray->top++;
 }
 
-object *removeArray(dynamicArray *targetArray, int index) {
-    if(index == targetArray->top) return popArray(targetArray);
-    object *ret = targetArray->elements[index];
-    for(int i=index; i < getElementNum(targetArray) - 1; i++) {
+DATA removeIdx(dynamicArray *targetArray, int index) {
+    for(int i=index;i<len(targetArray);i++){
         targetArray->elements[i] = targetArray->elements[i + 1];
     }
     targetArray->top--;
-    return ret;
 }
