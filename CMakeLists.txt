@@ -3,8 +3,4 @@ project(DataStructure C)
 
 set(CMAKE_C_STANDARD 11)
 
-include_directories(dynamicArray)
-
-add_executable(DataStructure
-        Inheritance/main.c
-        Inheritance/Object.c Inheritance/Object.h)
+add_executable(DataStructure Inheritance/main.c Inheritance/Object.h Inheritance/Object.c)

@@ -3,10 +3,12 @@
 Integer *initInteger() {
     Integer *newInteger = (Integer *)malloc(sizeof(Integer));
     Object *super = (Object *)newInteger;
-    super->toSting = integerToString;
+    super->toString = integerToString;
     super->equals = integerEquals;
-    newInteger->setValue = setValue;
+    newInteger->setValue = integerSetValue;
     newInteger->data = INIT_INTEGER_DATA;
+
+    return newInteger;
 }
 
 char* integerToString(Object *super) {
@@ -16,14 +18,23 @@ char* integerToString(Object *super) {
     return ret;
 }
 
-void setValue(Integer *this, int value) {
+int integerEquals(Object *super, Object *targetSuper) {
+    Integer *this = (Integer *)super;
+    Integer *target = (Integer *)targetSuper;
+    if(this->data == target->data) return 1;
+    return 0;
+}
+
+void integerSetValue(Integer *this, int value) {
     this->data = value;
 }
 
 Object *initObject() {
     Object *newObject = (Object *)malloc(sizeof(Object));
-    newObject->toSting = objectToString;
+    newObject->toString = objectToString;
     newObject->equals = objectEquals;
+
+    return newObject;
 }
 
 char *objectToString(Object *this) {
@@ -32,7 +43,7 @@ char *objectToString(Object *this) {
     return ret;
 }
 
-int *objectEquals(Object *this, Object *target) {
+int objectEquals(Object *this, Object *target) {
     if(this == target) return 1;
     return 0;
 }

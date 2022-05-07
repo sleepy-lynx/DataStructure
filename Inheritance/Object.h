@@ -5,23 +5,23 @@
 #include <stdio.h>
 #define INIT_INTEGER_DATA 0
 
-typedef struct {
-    char* (*toSting)(struct Object *tmp);
-    int (*equals)(struct Object *tmp, struct Object *tmpTarget);
+typedef struct Object{
+    char* (*toString)(struct Object *);
+    int (*equals)(struct Object *, struct Object *);
 }Object;
 
-typedef struct {
+typedef struct Integer{
     Object super;
-    void (*setValue)(struct Integer *this, int value);
+    void (*setValue)(struct Integer*, int);
     int data;
 }Integer;
 
 Integer *initInteger();
 char* integerToString(Object *super);
 int integerEquals(Object *super, Object *targetSuper);
-void setValue(Integer *this, int value);
+void integerSetValue(Integer *this, int value);
 Object *initObject();
 char *objectToString(Object *this);
-int *objectEquals(Object *this, Object *target);
+int objectEquals(Object *this, Object *target);
 
 #endif //DATASTRUCTURE_OBJECT_H

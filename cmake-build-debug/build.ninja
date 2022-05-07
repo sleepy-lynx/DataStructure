@@ -52,14 +52,12 @@ build cmake_object_order_depends_target_DataStructure: phony || CMakeFiles/DataS
 build CMakeFiles/DataStructure.dir/Inheritance/main.c.o: C_COMPILER__DataStructure_Debug /Users/moonhyeseung/CLionProjects/DataStructure/Inheritance/main.c || cmake_object_order_depends_target_DataStructure
   DEP_FILE = CMakeFiles/DataStructure.dir/Inheritance/main.c.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu11
-  INCLUDES = -I/Users/moonhyeseung/CLionProjects/DataStructure/dynamicArray
   OBJECT_DIR = CMakeFiles/DataStructure.dir
   OBJECT_FILE_DIR = CMakeFiles/DataStructure.dir/Inheritance
 
 build CMakeFiles/DataStructure.dir/Inheritance/Object.c.o: C_COMPILER__DataStructure_Debug /Users/moonhyeseung/CLionProjects/DataStructure/Inheritance/Object.c || cmake_object_order_depends_target_DataStructure
   DEP_FILE = CMakeFiles/DataStructure.dir/Inheritance/Object.c.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu11
-  INCLUDES = -I/Users/moonhyeseung/CLionProjects/DataStructure/dynamicArray
   OBJECT_DIR = CMakeFiles/DataStructure.dir
   OBJECT_FILE_DIR = CMakeFiles/DataStructure.dir/Inheritance
 
