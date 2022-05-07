@@ -1,8 +1,8 @@
 # DataStructure
-Implementing Python features using C
+Implementing Data structures using C lang
 
 ## TO-DO
-- [ ] Object management by Reference Counting
+- [ ] Memory management by Reference Counting
 - [x] [Dynamic Array(Python List)](dynamicArray)
-- [ ] inheritance
-- [ ] overloading
+- [ ] Inheritance
+- [ ] Generic Linked List
