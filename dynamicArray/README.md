@@ -16,7 +16,7 @@ void insert(dynamicArray *targetArray, int index, DATA object); // insert elemen
 DATA removeIdx(dynamicArray *targetArray, int index); // remove element at the index position
 ```
 
-### example
+### Example
 main.c
 ```c
 int main() {
