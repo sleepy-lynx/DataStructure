@@ -6,4 +6,4 @@ Implementing Data structures using C lang
 - [x] [Dynamic Array(Python List)](dynamicArray)
 - [x] [Inheritance](Inheritance)
 - [ ] Generic Linked List
-- [ ] [Linux Kernel Linked List implementation](KernelLinkedList)
+- [x] [Linux Kernel Linked List implementation](KernelLinkedList)
