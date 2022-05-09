@@ -49,17 +49,12 @@ cmake_ninja_workdir = /Users/moonhyeseung/CLionProjects/DataStructure/cmake-buil
 
 build cmake_object_order_depends_target_DataStructure: phony || CMakeFiles/DataStructure.dir
 
-build CMakeFiles/DataStructure.dir/Inheritance/main.c.o: C_COMPILER__DataStructure_Debug /Users/moonhyeseung/CLionProjects/DataStructure/Inheritance/main.c || cmake_object_order_depends_target_DataStructure
-  DEP_FILE = CMakeFiles/DataStructure.dir/Inheritance/main.c.o.d
+build CMakeFiles/DataStructure.dir/KernelLinkedList/main.c.o: C_COMPILER__DataStructure_Debug /Users/moonhyeseung/CLionProjects/DataStructure/KernelLinkedList/main.c || cmake_object_order_depends_target_DataStructure
+  DEP_FILE = CMakeFiles/DataStructure.dir/KernelLinkedList/main.c.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu11
+  INCLUDES = -I/Users/moonhyeseung/CLionProjects/DataStructure/KernelLinkedList
   OBJECT_DIR = CMakeFiles/DataStructure.dir
-  OBJECT_FILE_DIR = CMakeFiles/DataStructure.dir/Inheritance
-
-build CMakeFiles/DataStructure.dir/Inheritance/Object.c.o: C_COMPILER__DataStructure_Debug /Users/moonhyeseung/CLionProjects/DataStructure/Inheritance/Object.c || cmake_object_order_depends_target_DataStructure
-  DEP_FILE = CMakeFiles/DataStructure.dir/Inheritance/Object.c.o.d
-  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu11
-  OBJECT_DIR = CMakeFiles/DataStructure.dir
-  OBJECT_FILE_DIR = CMakeFiles/DataStructure.dir/Inheritance
+  OBJECT_FILE_DIR = CMakeFiles/DataStructure.dir/KernelLinkedList
 
 
 # =============================================================================
@@ -69,7 +64,7 @@ build CMakeFiles/DataStructure.dir/Inheritance/Object.c.o: C_COMPILER__DataStruc
 #############################################
 # Link the executable DataStructure
 
-build DataStructure: C_EXECUTABLE_LINKER__DataStructure_Debug CMakeFiles/DataStructure.dir/Inheritance/main.c.o CMakeFiles/DataStructure.dir/Inheritance/Object.c.o
+build DataStructure: C_EXECUTABLE_LINKER__DataStructure_Debug CMakeFiles/DataStructure.dir/KernelLinkedList/main.c.o
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
   OBJECT_DIR = CMakeFiles/DataStructure.dir
   POST_BUILD = :
