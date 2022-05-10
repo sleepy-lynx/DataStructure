@@ -6,4 +6,10 @@ set(CMAKE_C_STANDARD 11)
 include_directories(KernelLinkedList)
 
 add_executable(DataStructure
-        KernelLinkedList/main.c)
+        DynamicArray/object.h
+        DynamicArray/object.c
+        DynamicArray/dynamicArray.h
+        DynamicArray/dynamicArray.c
+        DynamicArray/myString.h
+        DynamicArray/myString.c
+        DynamicArray/main.c)

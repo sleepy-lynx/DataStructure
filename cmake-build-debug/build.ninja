@@ -49,12 +49,33 @@ cmake_ninja_workdir = /Users/moonhyeseung/CLionProjects/DataStructure/cmake-buil
 
 build cmake_object_order_depends_target_DataStructure: phony || CMakeFiles/DataStructure.dir
 
-build CMakeFiles/DataStructure.dir/KernelLinkedList/main.c.o: C_COMPILER__DataStructure_Debug /Users/moonhyeseung/CLionProjects/DataStructure/KernelLinkedList/main.c || cmake_object_order_depends_target_DataStructure
-  DEP_FILE = CMakeFiles/DataStructure.dir/KernelLinkedList/main.c.o.d
+build CMakeFiles/DataStructure.dir/DynamicArray/object.c.o: C_COMPILER__DataStructure_Debug /Users/moonhyeseung/CLionProjects/DataStructure/DynamicArray/object.c || cmake_object_order_depends_target_DataStructure
+  DEP_FILE = CMakeFiles/DataStructure.dir/DynamicArray/object.c.o.d
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu11
   INCLUDES = -I/Users/moonhyeseung/CLionProjects/DataStructure/KernelLinkedList
   OBJECT_DIR = CMakeFiles/DataStructure.dir
-  OBJECT_FILE_DIR = CMakeFiles/DataStructure.dir/KernelLinkedList
+  OBJECT_FILE_DIR = CMakeFiles/DataStructure.dir/DynamicArray
+
+build CMakeFiles/DataStructure.dir/DynamicArray/dynamicArray.c.o: C_COMPILER__DataStructure_Debug /Users/moonhyeseung/CLionProjects/DataStructure/DynamicArray/dynamicArray.c || cmake_object_order_depends_target_DataStructure
+  DEP_FILE = CMakeFiles/DataStructure.dir/DynamicArray/dynamicArray.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu11
+  INCLUDES = -I/Users/moonhyeseung/CLionProjects/DataStructure/KernelLinkedList
+  OBJECT_DIR = CMakeFiles/DataStructure.dir
+  OBJECT_FILE_DIR = CMakeFiles/DataStructure.dir/DynamicArray
+
+build CMakeFiles/DataStructure.dir/DynamicArray/myString.c.o: C_COMPILER__DataStructure_Debug /Users/moonhyeseung/CLionProjects/DataStructure/DynamicArray/myString.c || cmake_object_order_depends_target_DataStructure
+  DEP_FILE = CMakeFiles/DataStructure.dir/DynamicArray/myString.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu11
+  INCLUDES = -I/Users/moonhyeseung/CLionProjects/DataStructure/KernelLinkedList
+  OBJECT_DIR = CMakeFiles/DataStructure.dir
+  OBJECT_FILE_DIR = CMakeFiles/DataStructure.dir/DynamicArray
+
+build CMakeFiles/DataStructure.dir/DynamicArray/main.c.o: C_COMPILER__DataStructure_Debug /Users/moonhyeseung/CLionProjects/DataStructure/DynamicArray/main.c || cmake_object_order_depends_target_DataStructure
+  DEP_FILE = CMakeFiles/DataStructure.dir/DynamicArray/main.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu11
+  INCLUDES = -I/Users/moonhyeseung/CLionProjects/DataStructure/KernelLinkedList
+  OBJECT_DIR = CMakeFiles/DataStructure.dir
+  OBJECT_FILE_DIR = CMakeFiles/DataStructure.dir/DynamicArray
 
 
 # =============================================================================
@@ -64,7 +85,7 @@ build CMakeFiles/DataStructure.dir/KernelLinkedList/main.c.o: C_COMPILER__DataSt
 #############################################
 # Link the executable DataStructure
 
-build DataStructure: C_EXECUTABLE_LINKER__DataStructure_Debug CMakeFiles/DataStructure.dir/KernelLinkedList/main.c.o
+build DataStructure: C_EXECUTABLE_LINKER__DataStructure_Debug CMakeFiles/DataStructure.dir/DynamicArray/object.c.o CMakeFiles/DataStructure.dir/DynamicArray/dynamicArray.c.o CMakeFiles/DataStructure.dir/DynamicArray/myString.c.o CMakeFiles/DataStructure.dir/DynamicArray/main.c.o
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
   OBJECT_DIR = CMakeFiles/DataStructure.dir
   POST_BUILD = :
