@@ -1,13 +1,13 @@
 # ninja log v5
-1	251	1651949597641343037	CMakeFiles/DataStructure.dir/main.c.o	fdc0880316104746
 0	116	1651950367930822876	CMakeFiles/DataStructure.dir/Inheritance/main.c.o	a46a8bb760cca606
+1	251	1651949597641343037	CMakeFiles/DataStructure.dir/main.c.o	fdc0880316104746
+1	140	1651948927725583159	CMakeFiles/DataStructure.dir/Object.c.o	1b144ef54df2940
 1	112	1651948557207013578	CMakeFiles/DataStructure.dir/Inheritance/main2.c.o	10fb213fa16f036f
-0	449	1651950350959219816	CMakeFiles/DataStructure.dir/Inheritance/Object.c.o	6a5ad9dba5315065
 1	96	1651949395171140959	CMakeFiles/DataStructure.dir/dynamicArray/dynamicArray.c.o	66e3dc6279288b70
+0	449	1651950350959219816	CMakeFiles/DataStructure.dir/Inheritance/Object.c.o	6a5ad9dba5315065
 2	253	1651751674555126355	CMakeFiles/DataStructure.dir/dynamicArray/object.c.o	8f93a1ce64d7c798
 0	93	1651949395167218003	CMakeFiles/DataStructure.dir/dynamicArray/main.c.o	83f6047b31003464
-1	140	1651948927725583159	CMakeFiles/DataStructure.dir/Object.c.o	1b144ef54df2940
-114	285	1652095024788438131	DataStructure	926f3ded6dab1fca
-1	156	1652171676575259058	build.ninja	f2ecfea9765ac574
 0	7	0	clean	3c8e6cc385ee00ba
+114	285	1652095024788438131	DataStructure	926f3ded6dab1fca
+1	156	1652247833975751828	build.ninja	f2ecfea9765ac574
 0	113	1652095024617917934	CMakeFiles/DataStructure.dir/KernelLinkedList/main.c.o	f5c220c2b97ca290
